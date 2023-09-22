@@ -25,7 +25,7 @@ function domToNode(domNode) {
             nodeElement.children.push(domToNode(child))
         }
     }
-    return nodeElement
+    return json.dumps(nodeElement, ensure_ascii=False)
 }
 module.exports = (req, res) => {
     const { body } = req
